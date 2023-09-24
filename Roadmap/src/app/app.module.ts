@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { StartPointComponent } from './start-point/start-point.component';
 import { LayerComponent } from './layer/layer.component';
+import { EndGoalComponent } from './end-goal/end-goal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     StartPointComponent,
-    LayerComponent
+    LayerComponent,
+    EndGoalComponent
   ],
   imports: [
     BrowserModule,
