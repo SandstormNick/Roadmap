@@ -22,7 +22,7 @@ export class AppComponent {
     ]),
     new Layer(2, [
       new Card(2, 4, "Card 4", 1, null),
-      new Card(2, 5, "Card 5", 1, null)
+      new Card(2, 5, "Last card for now", 1, null)
     ])
   ];
 

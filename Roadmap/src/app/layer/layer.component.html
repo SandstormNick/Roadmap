@@ -1,5 +1,9 @@
 <div class="row bg-secondary">
     <div class="col-md-12">
         <p>{{ layerTitle }}</p>
+        <app-card 
+            *ngFor="let card of layer.cards"
+            [card]="card">
+        </app-card>
     </div>
 </div>
