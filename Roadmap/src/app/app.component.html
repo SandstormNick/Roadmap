@@ -4,8 +4,8 @@
             <app-header></app-header>
             <app-start-point></app-start-point>
             <app-layer
-                *ngFor="let layer of layerCount; let i = index"
-                [layerCount]="i+1">
+                *ngFor="let layer of layers"
+                [layer]="layer">
             </app-layer>
             <app-end-goal></app-end-goal>
         </div>

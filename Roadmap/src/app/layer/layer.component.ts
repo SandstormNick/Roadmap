@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Layer } from '../models/layer';
 
 @Component({
   selector: 'app-layer',
@@ -8,9 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LayerComponent implements OnInit{
   layerTitle: string = "Layer";
   @Input() layerCount: number;
+  @Input() layer: Layer;
 
   ngOnInit(): void {
-    this.layerTitle += ` ${this.layerCount}`;
+    this.layerTitle += ` ${this.layer.layerCount}`;
+    console.log(this.layer);
   }
 
 }
