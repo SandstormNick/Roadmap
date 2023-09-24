@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { StartPointComponent } from './start-point/start-point.component';
 import { LayerComponent } from './layer/layer.component';
 import { EndGoalComponent } from './end-goal/end-goal.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EndGoalComponent } from './end-goal/end-goal.component';
     HeaderComponent,
     StartPointComponent,
     LayerComponent,
-    EndGoalComponent
+    EndGoalComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
