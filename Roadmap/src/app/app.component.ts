@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, AfterContentInit } from '@angular/core';
+
+declare var LeaderLine: any;
+
 
 import { Card } from './models/card';
 import { Layer } from './models/layer';
@@ -9,8 +12,21 @@ import { Layer } from './models/layer';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterContentInit {
   title = 'Roadmap';
+
+  ngAfterContentInit(): void {
+    //temporary to test leader-line
+    setTimeout(function(){
+
+      let startElement = document.getElementById('start'),
+        endElement = document.getElementById('end');
+
+        // New leader line has red color and size 4.
+        new LeaderLine(startElement, endElement, {color: 'red', size: 4});
+
+    }, 5000)
+  }
 
   //layerCount: number[] = [1,2];
 
