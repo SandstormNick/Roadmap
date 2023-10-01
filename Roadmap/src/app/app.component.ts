@@ -53,3 +53,9 @@ export class AppComponent implements AfterContentInit {
   ];
 
 }
+
+
+
+// TO DO
+
+// * Add a service that creates all the lead lines once all the components have RouteConfigLoadEnd.

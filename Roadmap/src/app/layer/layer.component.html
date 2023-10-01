@@ -3,7 +3,7 @@
         <p>{{ layerTitle }}</p>
     </div>
     <div class="col-md-11  d-flex justify-content-center">
-        <app-card 
+        <app-card id={{card.cardId}}
             *ngFor="let card of layer.cards"
             [card]="card">
         </app-card>
