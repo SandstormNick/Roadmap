@@ -1,34 +1,23 @@
-import { Component, AfterContentInit } from '@angular/core';
-
-declare var LeaderLine: any;
-
+import { Component, AfterViewInit } from '@angular/core';
 
 import { Card } from './models/card';
 import { Layer } from './models/layer';
 
+import { LeaderLineService } from './services/leader-line.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterContentInit {
+export class AppComponent implements AfterViewInit {
   title = 'Roadmap';
 
-  ngAfterContentInit(): void {
-    //temporary to test leader-line
-    setTimeout(function(){
+  constructor(private leaderLineService: LeaderLineService) { }
 
-      let startElement = document.getElementById('start'),
-        endElement = document.getElementById('end');
-
-        // New leader line has red color and size 4.
-        new LeaderLine(startElement, endElement, {color: 'red', size: 4});
-
-    }, 5000)
+  ngAfterViewInit(): void {
+    this.leaderLineService.DrawLeaderLines(this.layers);
   }
-
-  //layerCount: number[] = [1,2];
 
   layers: Layer[] = [
     new Layer(1, [
@@ -41,7 +30,7 @@ export class AppComponent implements AfterContentInit {
       new Card(2, 5, "Card 5", 1, null, false)
     ]),
     new Layer(3, [
-      new Card(3, 6, "Layer 3 Card", 4, null, true)
+      new Card(3, 6, "Card 6", 4, null, true)
     ]),
     new Layer(4, [
       new Card(4, 7, "Card 7", 6, null, true),
