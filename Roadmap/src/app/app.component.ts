@@ -47,4 +47,23 @@ export class AppComponent implements AfterViewInit {
 
 // TO DO
 
-// * Add a service that creates all the lead lines once all the components have RouteConfigLoadEnd.
+//Phase 1
+// * Need to work on neatening the Leader Lines
+// * Styling of Leader Lines
+// * Layout of Cards - based on how many there are in a layer.
+// * Styling of Start and end goals
+// * Styling of Layers
+// * Styling of cards
+// * Styling of Title
+
+//Phase 2
+// * Ability to update Title
+// * Ability to add cards in memory
+// * Ability to delete cards in memory
+
+//Phase 3
+// * Ability to mark cards as complete in memory
+
+//Phase 4
+// * Ability to write it all to a text file.
+// Ability to read it all from a text file

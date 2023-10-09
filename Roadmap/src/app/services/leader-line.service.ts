@@ -65,6 +65,17 @@ export class LeaderLineService {
             new LeaderLine(startElement, endElement, {color: 'red', size: 4, path: 'straight'});
           }
         }
+
+        //Siblings
+        if (card.siblingCard != null){
+          startElement = document.getElementById(card.siblingCard.toString());
+          endElement = document.getElementById(card.cardId.toString());
+
+          // New leader line has red color and size 4.
+          if (startElement != null && endElement != null){
+            new LeaderLine(startElement, endElement, {color: 'red', size: 4, path: 'straight'});
+          }
+        }
         
       });
       
