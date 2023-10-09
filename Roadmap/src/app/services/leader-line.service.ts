@@ -1,3 +1,6 @@
+//This is the Documentation for the Leader-Line library
+//https://anseki.github.io/leader-line/
+
 import { Injectable } from '@angular/core';
 import { Layer } from '../models/layer';
 
@@ -36,7 +39,7 @@ export class LeaderLineService {
 
             // New leader line has red color and size 4.
             if (startElement != null && endElement != null){
-              new LeaderLine(startElement, endElement, {color: 'red', size: 4});
+              new LeaderLine(startElement, endElement, {color: 'red', size: 4, path: 'straight'});
             }
           }
         }
@@ -48,7 +51,7 @@ export class LeaderLineService {
 
           // New leader line has red color and size 4.
           if (startElement != null && endElement != null){
-            new LeaderLine(startElement, endElement, {color: 'red', size: 4});
+            new LeaderLine(startElement, endElement, {color: 'red', size: 4, path: 'arc'});
           }
         }
 
@@ -59,7 +62,7 @@ export class LeaderLineService {
 
           // New leader line has red color and size 4.
           if (startElement != null && endElement != null){
-            new LeaderLine(startElement, endElement, {color: 'red', size: 4});
+            new LeaderLine(startElement, endElement, {color: 'red', size: 4, path: 'straight'});
           }
         }
         
